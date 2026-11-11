@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aureon Wealth | Patrimônio &amp; Legado</title>
+<meta name="description" content="Aureon Wealth: planejamento financeiro e patrimonial, atendimento personalizado e acesso a um ecossistema de soluções especializadas para você, sua família e seus negócios.">
+<meta property="og:title" content="Aureon Wealth | Patrimônio &amp; Legado">
+<meta property="og:description" content="Seu patrimônio merece uma visão completa. Escritório Wealth Powered by AWT.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="aureon-wealth-logo.png">
+<meta name="theme-color" content="#0c0a07">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c0a07'/%3E%3Cg fill='%23c9a84c' transform='translate(18 18) scale(.64)'%3E%3Cpath d='M50 2L98 98H73L50 51L27 98H2Z'/%3E%3Cpath d='M50 67L62 98H38Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ink + surface */
+  --ink-900:#0c0a07; --ink-800:#15120c; --ink-700:#1f1a11; --ink-600:#2c2618;
+  --surface-0:#ffffff; --surface-1:#f8f3e6; --surface-2:#f0e8d3; --surface-3:#e4d9bb;
+  /* brand gold */
+  --brand:#c9a84c; --brand-soft:#e0c57a; --brand-deep:#8a6f22; --brand-wash:rgba(201,168,76,.12);
+  /* secondary: deep emerald + copper */
+  --emerald-900:#07211d; --emerald-700:#0f3d35; --emerald-500:#1c6b5c;
+  --copper:#b8683a;
+  /* text on dark */
+  --text-hi:#f7efd9; --text-body:rgba(247,239,217,.84); --text-mute:rgba(247,239,217,.62); --text-faint:rgba(247,239,217,.42);
+  /* text on light */
+  --text-dk-hi:#1a150b; --text-dk-body:rgba(26,21,11,.80); --text-dk-mute:rgba(26,21,11,.60);
+  /* hairlines */
+  --line-faint:rgba(247,239,217,.08); --line:rgba(247,239,217,.16); --line-strong:rgba(247,239,217,.30);
+  --line-dk:rgba(26,21,11,.14);
+  /* glass */
+  --glass:rgba(20,16,9,.46); --glass-lt:rgba(255,255,255,.14); --glass-edge:rgba(255,255,255,.22);
+  /* type */
+  --font-display:'Cormorant Garamond',Georgia,serif; --font-body:'Jost',system-ui,sans-serif;
+  --text-xs:clamp(.72rem,.70rem + .10vw,.80rem);
+  --text-sm:clamp(.86rem,.83rem + .15vw,.95rem);
+  --text-base:clamp(1rem,.96rem + .20vw,1.1rem);
+  --text-lg:clamp(1.18rem,1.10rem + .38vw,1.4rem);
+  --text-xl:clamp(1.5rem,1.30rem + .70vw,1.9rem);
+  --text-2xl:clamp(2rem,1.6rem + 1.6vw,3rem);
+  --text-3xl:clamp(2.6rem,1.9rem + 3vw,4.6rem);
+  --text-4xl:clamp(3rem,1.9rem + 5.2vw,7rem);
+  --text-mega:clamp(4.4rem,2rem + 17vw,19rem);
+  --track-display:-.03em; --track-tight:-.015em; --track-wide:.12em; --track-caps:.2em;
+  --leading-display:.98; --leading-tight:1.12; --leading-body:1.7;
+  /* spacing */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px; --sp-7:48px; --sp-8:64px; --sp-9:96px;
+  --section-y:clamp(80px,11vw,170px); --gutter:clamp(20px,5vw,72px); --measure:62ch; --maxw:1320px;
+  /* radii */
+  --r-sm:6px; --r-md:14px; --r-lg:26px; --r-pill:999px;
+  /* elevation */
+  --e-1:0 1px 2px rgba(12,10,7,.18);
+  --e-2:0 2px 4px rgba(12,10,7,.14),0 6px 16px rgba(12,10,7,.12);
+  --e-3:0 6px 12px rgba(12,10,7,.16),0 18px 40px rgba(12,10,7,.20);
+  --e-4:0 12px 24px rgba(12,10,7,.22),0 40px 90px rgba(12,10,7,.34);
+  --e-glow:0 0 0 1px rgba(201,168,76,.28),0 12px 60px rgba(201,168,76,.22);
+  --e-inset:inset 0 1px 0 rgba(255,255,255,.14);
+  /* motion */
+  --ease-out:cubic-bezier(.22,.7,.2,1); --ease-in-out:cubic-bezier(.65,.02,.3,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1); --ease-glide:cubic-bezier(.16,1,.3,1);
+  --dur-1:160ms; --dur-2:280ms; --dur-3:460ms; --dur-4:760ms; --dur-5:1300ms;
+  --z-base:1; --z-sticky:100; --z-overlay:500; --z-cursor:900; --z-loader:1000;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--ink-900);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-body);font-weight:300;overflow-x:clip;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,.step b{font-variant-numeric:lining-nums;font-family:var(--font-display);font-weight:500;letter-spacing:var(--track-display);line-height:var(--leading-display);text-wrap:balance;color:var(--text-hi)}
+p{text-wrap:pretty}
+.wrap{width:100%;max-width:calc(var(--maxw) + var(--gutter)*2);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--brand);font-weight:500;display:flex;align-items:center;gap:var(--sp-3)}
+.eyebrow::before{content:'';width:40px;height:1px;background:currentColor}
+.on-light .eyebrow{color:var(--brand-deep)}
+em{font-style:italic;color:var(--brand)}
+.on-light em{color:var(--brand-deep)}
+
+/* reveal */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity var(--dur-4) var(--ease-glide) var(--d,0ms),transform var(--dur-4) var(--ease-glide) var(--d,0ms)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:var(--sp-3);padding:16px 28px;border-radius:var(--r-pill);font-weight:500;font-size:var(--text-sm);letter-spacing:.04em;position:relative;overflow:hidden;isolation:isolate;transition:transform var(--dur-2) var(--ease-spring),box-shadow var(--dur-2) var(--ease-out),color var(--dur-2)}
+.btn-gold{background:linear-gradient(120deg,var(--brand-soft),var(--brand) 45%,var(--brand-deep));color:var(--ink-900);box-shadow:var(--e-2),var(--e-inset)}
+.btn-gold::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform var(--dur-4) var(--ease-glide)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:var(--e-glow),var(--e-3)}
+.btn-gold:hover::after{transform:translateX(120%)}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--text-hi);backdrop-filter:blur(10px);background:var(--glass-lt)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--brand);color:var(--brand-soft)}
+.btn svg{width:16px;height:16px;transition:transform var(--dur-2) var(--ease-out)}
+.btn:hover svg{transform:translateX(4px)}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:var(--z-loader);background:var(--ink-900);display:grid;place-items:center;transition:transform var(--dur-5) var(--ease-in-out),opacity var(--dur-4)}
+.loader.done{transform:translateY(-100%);pointer-events:none}
+.loader-in{display:flex;flex-direction:column;align-items:center;gap:var(--sp-5)}
+.loader img{width:min(300px,64vw);height:auto;aspect-ratio:3726/1149;animation:breathe 2.4s var(--ease-in-out) infinite}
+.loader-n{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);letter-spacing:var(--track-tight)}
+.loader-bar{width:min(260px,60vw);height:1px;background:var(--line);position:relative;overflow:hidden}
+.loader-bar i{position:absolute;inset:0;background:var(--brand);transform-origin:left;transform:scaleX(0)}
+@keyframes breathe{0%,100%{opacity:.75;transform:scale(.98)}50%{opacity:1;transform:scale(1)}}
+
+/* cursor */
+.cursor{position:fixed;left:0;top:0;width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid var(--brand);border-radius:50%;pointer-events:none;z-index:var(--z-cursor);transition:width var(--dur-2) var(--ease-out),height var(--dur-2) var(--ease-out),background var(--dur-2),margin var(--dur-2) var(--ease-out);mix-blend-mode:normal;opacity:0}
+.cursor.on{opacity:1}
+.cursor.big{width:76px;height:76px;margin:-38px 0 0 -38px;background:var(--brand-wash)}
+@media (pointer:coarse){.cursor{display:none}}
+
+/* header */
+.hdr{position:fixed;top:var(--sp-4);left:50%;transform:translateX(-50%);width:min(calc(100% - var(--gutter)*1.2),1280px);z-index:var(--z-sticky);display:flex;align-items:center;justify-content:space-between;gap:var(--sp-5);padding:10px 12px 10px 24px;border-radius:var(--r-pill);background:var(--glass);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border:1px solid var(--line);box-shadow:var(--e-3),var(--e-inset);animation:drop var(--dur-5) var(--ease-glide) 2.2s both}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-30px)}to{opacity:1;transform:translate(-50%,0)}}
+.hdr .logo img{height:40px;width:auto}
+.nav{display:flex;gap:var(--sp-6)}
+.nav a{font-size:var(--text-sm);color:var(--text-body);position:relative;padding:6px 0}
+.nav a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brand);transform:scaleX(0);transform-origin:right;transition:transform var(--dur-3) var(--ease-out)}
+.nav a:hover{color:var(--brand-soft)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr .btn{padding:12px 22px}
+@media (max-width:980px){.nav{display:none}.hdr{padding-left:18px}}
+@media (max-width:520px){.hdr .btn{padding:10px 16px;font-size:var(--text-xs)}.hdr .logo img{height:32px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:var(--ink-900);isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.05);animation:kenburns 26s var(--ease-in-out) infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translateX(-1.5%)}}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,10,7,.94) 0%,rgba(12,10,7,.78) 42%,rgba(7,33,29,.42) 100%),linear-gradient(0deg,var(--ink-900) 0%,transparent 40%)}
+.hero-main{flex:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:var(--sp-6);padding-top:clamp(96px,12vh,130px);padding-bottom:var(--sp-5)}
+.hero h1{font-size:clamp(2.8rem,1rem + 7.2vh + 2vw,6rem);margin-top:var(--sp-4)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(105%);animation:lineup var(--dur-5) var(--ease-glide) forwards;animation-delay:calc(2.3s + var(--i)*130ms)}
+@keyframes lineup{to{transform:none}}
+.hero p.lead{max-width:50ch;margin-top:var(--sp-4);font-size:var(--text-base);color:var(--text-body);opacity:0;animation:fadein var(--dur-5) var(--ease-out) 3s forwards}
+.hero .cta{display:flex;flex-wrap:wrap;gap:var(--sp-4);margin-top:var(--sp-5);opacity:0;animation:fadein var(--dur-5) var(--ease-out) 3.2s forwards}
+@keyframes fadein{to{opacity:1}}
+.stage3d{position:relative;height:min(54vh,520px);min-height:300px;cursor:grab;touch-action:pan-y}
+.stage3d:active{cursor:grabbing}
+.stage3d canvas{position:absolute;inset:0;width:100%;height:100%}
+.stage3d .hint{white-space:nowrap;position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-mute);display:flex;gap:var(--sp-2);align-items:center;padding:8px 16px;border-radius:var(--r-pill);background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line)}
+.hero-disc{border-top:1px solid var(--line);background:var(--glass);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);padding-block:var(--sp-4)}
+.hero-disc p{font-size:var(--text-sm);line-height:1.55;color:var(--text-hi);max-width:150ch;font-weight:400}
+.hero-disc a{color:var(--brand-soft);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.hero-main{grid-template-columns:1fr;padding-top:110px}.stage3d{order:-1;height:260px;min-height:260px}.hero h1{font-size:clamp(2.7rem,12vw,4rem)}}
+
+/* marquee */
+.marq{background:var(--brand);color:var(--ink-900);overflow:hidden;padding-block:var(--sp-5);cursor:grab;user-select:none;touch-action:pan-y;position:relative;z-index:var(--z-base)}
+.marq:active{cursor:grabbing}
+.marq-track{display:flex;width:max-content;will-change:transform}
+.marq-item{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:600;letter-spacing:var(--track-tight);display:flex;align-items:center;gap:var(--sp-6);padding-right:var(--sp-6);white-space:nowrap}
+.marq-item i{width:14px;height:14px;background:var(--ink-900);transform:rotate(45deg);display:block}
+
+/* about */
+.sec{padding-block:var(--section-y);position:relative}
+.on-light{background:var(--surface-1);color:var(--text-dk-body)}
+.on-light h2,.on-light h3{color:var(--text-dk-hi)}
+.about{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(40px,7vw,120px);align-items:center}
+.about h2{font-size:var(--text-3xl);margin-top:var(--sp-5)}
+.about p{margin-top:var(--sp-5);max-width:var(--measure);color:var(--text-dk-body)}
+.about .quote{font-family:var(--font-display);font-style:italic;font-size:var(--text-xl);color:var(--brand-deep);border-left:2px solid var(--brand);padding-left:var(--sp-5);margin-top:var(--sp-6);line-height:1.3}
+.wall{position:relative;height:clamp(420px,52vw,680px)}
+.polaroid{position:absolute;background:var(--surface-0);padding:12px 12px 34px;box-shadow:var(--e-4);border-radius:var(--r-sm);transition:transform var(--dur-4) var(--ease-glide),box-shadow var(--dur-3);will-change:transform}
+.polaroid img{width:100%;height:100%;object-fit:cover}
+.polaroid:hover{transform:rotate(0) translateY(-10px) scale(1.04)!important;box-shadow:var(--e-glow),var(--e-4);z-index:5}
+.pl-1{left:0;top:4%;width:56%;aspect-ratio:4/5;transform:rotate(-5deg);animation:floaty 9s var(--ease-in-out) infinite}
+.pl-2{right:0;top:0;width:46%;aspect-ratio:1/1;transform:rotate(4deg);animation:floaty 11s var(--ease-in-out) -3s infinite}
+.pl-3{right:6%;bottom:0;width:54%;aspect-ratio:4/3;transform:rotate(-2deg);animation:floaty 10s var(--ease-in-out) -6s infinite}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.badge3{position:absolute;left:4%;bottom:6%;z-index:6;padding:var(--sp-4) var(--sp-5);border-radius:var(--r-md);background:var(--glass);backdrop-filter:blur(14px);border:1px solid var(--glass-edge);box-shadow:var(--e-3);color:var(--text-hi)}
+.badge3 b{display:block;font-family:var(--font-display);font-size:var(--text-xl);color:var(--brand-soft);font-weight:600}
+.badge3 span{font-size:var(--text-xs);letter-spacing:var(--track-wide);text-transform:uppercase;color:var(--text-mute)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* strategies: compare */
+.strat{background:linear-gradient(180deg,var(--ink-900),var(--emerald-900));overflow:hidden}
+.strat-head{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-7);align-items:end;margin-bottom:var(--sp-8)}
+.strat-head h2{font-size:var(--text-3xl);margin-top:var(--sp-5)}
+.block-title{font-family:var(--font-display);font-size:var(--text-xl);color:var(--brand-soft);font-weight:500}
+.strat-head p{margin-top:var(--sp-3);max-width:44ch;color:var(--text-mute)}
+@media (max-width:900px){.strat-head{grid-template-columns:1fr}}
+.cmp{position:relative;height:clamp(460px,46vw,620px);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e-4),var(--e-glow);cursor:ew-resize;user-select:none;touch-action:pan-y;isolation:isolate}
+.cmp-layer{position:absolute;inset:0;display:flex;align-items:flex-end;padding:clamp(24px,4vw,56px)}
+.cmp-layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.cmp-layer::before{content:'';position:absolute;inset:0;z-index:-1}
+.cmp-a::before{background:linear-gradient(0deg,rgba(7,33,29,.96) 8%,rgba(15,61,53,.55) 60%,rgba(7,33,29,.25))}
+.cmp-b{clip-path:inset(0 0 0 var(--x,50%));justify-content:flex-end;text-align:right}
+.cmp-b::before{background:linear-gradient(0deg,rgba(138,111,34,.97) 8%,rgba(201,168,76,.58) 60%,rgba(184,104,58,.30))}
+.cmp-copy{max-width:min(420px,42%)}
+.cmp-copy h3{font-size:var(--text-2xl)}
+.cmp-copy p{margin-top:var(--sp-3);font-size:var(--text-sm)}
+.cmp-b .cmp-copy h3,.cmp-b .cmp-copy p{color:var(--ink-900)}
+.cmp-b .cmp-copy p{color:var(--ink-800)}
+.cmp-tag{display:inline-block;margin-bottom:var(--sp-3);font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;padding:6px 14px;border-radius:var(--r-pill);border:1px solid currentColor}
+.cmp-a .cmp-tag{color:var(--brand-soft)}
+.cmp-b .cmp-tag{color:var(--ink-900)}
+.cmp-handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:var(--text-hi);z-index:3;transform:translateX(-1px)}
+.cmp-handle span{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px;border-radius:50%;background:var(--glass-lt);backdrop-filter:blur(14px);border:1px solid var(--glass-edge);box-shadow:var(--e-3),var(--e-inset);display:grid;place-items:center;color:var(--text-hi);font-size:var(--text-lg);letter-spacing:-.1em;transition:transform var(--dur-2) var(--ease-spring)}
+.cmp:hover .cmp-handle span{transform:scale(1.12)}
+.cmp-note{margin-top:var(--sp-5);font-size:var(--text-sm);color:var(--text-mute);max-width:90ch}
+.cmp-top{position:absolute;top:var(--sp-5);left:50%;transform:translateX(-50%);z-index:4;font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;padding:8px 18px;border-radius:var(--r-pill);background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--text-hi);white-space:nowrap}
+@media (max-width:700px){.cmp-copy{max-width:46%}.cmp-copy h3{font-size:var(--text-xl)}.cmp-copy p{font-size:var(--text-xs)}.cmp-top{display:none}}
+
+/* solutions: coverflow */
+.sol{background:var(--ink-900);overflow:hidden}
+.sol-head{display:flex;justify-content:space-between;align-items:end;gap:var(--sp-6);flex-wrap:wrap;margin-bottom:var(--sp-7)}
+.sol-head h2{font-size:var(--text-3xl);margin-top:var(--sp-5);max-width:16ch}
+.sol-head p{max-width:42ch;color:var(--text-mute)}
+.belt{position:relative;height:clamp(520px,50vw,600px);perspective:1500px;cursor:grab;touch-action:pan-y;user-select:none}
+.belt:active{cursor:grabbing}
+.card{position:absolute;left:0;top:0;width:clamp(260px,26vw,360px);height:clamp(460px,44vw,540px);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e-4);background:var(--ink-700);will-change:transform,opacity,filter;border:1px solid var(--line)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-5) var(--ease-glide);pointer-events:none}
+.card:hover img{transform:scale(1.08)}
+.card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,10,7,.96) 6%,rgba(12,10,7,.55) 48%,transparent 78%)}
+.card-in{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:var(--sp-5)}
+.card-in .n{font-size:var(--text-xs);letter-spacing:var(--track-caps);color:var(--brand);text-transform:uppercase}
+.card-in h3{font-size:var(--text-xl);margin-top:var(--sp-2);line-height:1.05}
+.card-in p{font-size:var(--text-sm);margin-top:var(--sp-3);color:var(--text-body);line-height:1.5}
+.card-in small{display:block;margin-top:var(--sp-3);padding-top:var(--sp-3);border-top:1px solid var(--line);font-size:var(--text-xs);color:var(--text-mute);line-height:1.45}
+.belt-ui{display:flex;justify-content:center;align-items:center;gap:var(--sp-5);margin-top:var(--sp-6)}
+.arrow{width:54px;height:54px;border-radius:50%;border:1px solid var(--line-strong);background:var(--glass-lt);backdrop-filter:blur(10px);display:grid;place-items:center;transition:transform var(--dur-2) var(--ease-spring),background var(--dur-2),color var(--dur-2)}
+.arrow:hover{background:var(--brand);color:var(--ink-900);transform:scale(1.1)}
+.dots{display:flex;gap:var(--sp-2)}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--line-strong);transition:all var(--dur-3) var(--ease-out)}
+.dots i.on{width:28px;border-radius:var(--r-pill);background:var(--brand)}
+
+/* model: gold section */
+.model{background:linear-gradient(135deg,var(--brand-soft),var(--brand) 45%,var(--brand-deep));color:var(--ink-900);overflow:hidden}
+.model::before{content:'';position:absolute;right:-12%;top:-20%;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 65%);animation:drift 14s var(--ease-in-out) infinite alternate}
+@keyframes drift{to{transform:translate(-8%,10%) scale(1.15)}}
+.model h2{font-size:var(--text-3xl);color:var(--ink-900);margin-top:var(--sp-5);max-width:15ch}
+.model .eyebrow{color:var(--ink-900)}
+.model-top{display:flex;justify-content:space-between;gap:var(--sp-7);align-items:end;flex-wrap:wrap;margin-bottom:var(--sp-8)}
+.model-top p{max-width:44ch;color:var(--ink-800);font-weight:400}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);position:relative}
+.step{position:relative;padding:var(--sp-6);border-radius:var(--r-lg);background:var(--glass-lt);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--glass-edge);box-shadow:var(--e-2),var(--e-inset);transition:transform var(--dur-3) var(--ease-glide),background var(--dur-3),color var(--dur-3),box-shadow var(--dur-3);min-height:230px;overflow:hidden}
+.step b{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:500;color:var(--ink-900);line-height:1;display:block;transition:color var(--dur-3)}
+.step h3{font-size:var(--text-xl);color:var(--ink-900);margin-top:var(--sp-4);transition:color var(--dur-3)}
+.step p{font-size:var(--text-sm);margin-top:var(--sp-2);color:var(--ink-800);font-weight:400;transition:color var(--dur-3)}
+.step:hover,.step.hot{background:var(--ink-900);transform:translateY(-8px);box-shadow:var(--e-4)}
+.step:hover b,.step.hot b{color:var(--brand)}
+.step:hover h3,.step.hot h3{color:var(--text-hi)}
+.step:hover p,.step.hot p{color:var(--text-body)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* audience accordion */
+.aud{background:var(--surface-1)}
+.aud h2{font-size:var(--text-3xl);margin-top:var(--sp-5);max-width:18ch}
+.acc{display:grid;grid-template-columns:var(--c0,1fr) var(--c1,1fr) var(--c2,1fr) var(--c3,1fr);gap:var(--sp-4);height:clamp(440px,42vw,560px);margin-top:var(--sp-8);transition:grid-template-columns var(--dur-4) var(--ease-glide)}
+.acc[data-a="0"]{--c0:3fr;--c1:1fr;--c2:1fr;--c3:1fr}
+.acc[data-a="1"]{--c0:1fr;--c1:3fr;--c2:1fr;--c3:1fr}
+.acc[data-a="2"]{--c0:1fr;--c1:1fr;--c2:3fr;--c3:1fr}
+.acc[data-a="3"]{--c0:1fr;--c1:1fr;--c2:1fr;--c3:3fr}
+.pane{position:relative;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;box-shadow:var(--e-3);min-width:0;background:var(--ink-800)}
+.pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.85) brightness(.7);transition:filter var(--dur-4) var(--ease-out),transform var(--dur-5) var(--ease-glide)}
+.pane.on img{filter:none;transform:scale(1.05)}
+.pane::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,10,7,.92),transparent 65%)}
+.pane-in{position:absolute;inset:auto 0 0 0;z-index:2;padding:var(--sp-5);color:var(--text-hi)}
+.pane-in h3{font-size:var(--text-xl);line-height:1.05}
+.pane-in p{font-size:var(--text-sm);max-height:0;opacity:0;overflow:hidden;transition:max-height var(--dur-4) var(--ease-glide),opacity var(--dur-3) var(--ease-out) 140ms,margin var(--dur-3);color:var(--text-body)}
+.pane.on .pane-in p{max-height:140px;opacity:1;margin-top:var(--sp-3)}
+.pane .num{position:absolute;top:var(--sp-5);left:var(--sp-5);z-index:2;font-size:var(--text-xs);letter-spacing:var(--track-caps);color:var(--text-hi);padding:6px 12px;border-radius:var(--r-pill);background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--line)}
+@media (max-width:760px){.acc{grid-template-columns:1fr;height:auto}.acc .pane{height:120px;transition:height var(--dur-4) var(--ease-glide)}.acc .pane.on{height:340px}}
+
+/* values */
+.vals{background:var(--emerald-900);overflow:hidden}
+.vals-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px);align-items:center}
+.vals h2{font-size:var(--text-3xl);margin-top:var(--sp-5);margin-bottom:var(--sp-7)}
+.vrow{display:flex;align-items:baseline;gap:var(--sp-5);padding:var(--sp-5) 0;border-top:1px solid var(--line);cursor:pointer;transition:padding var(--dur-3) var(--ease-out),color var(--dur-3)}
+.vrow:last-child{border-bottom:1px solid var(--line)}
+.vrow span{font-size:var(--text-xs);color:var(--text-faint);letter-spacing:var(--track-caps);min-width:28px}
+.vrow h3{font-size:var(--text-2xl);color:var(--text-mute);transition:color var(--dur-3),transform var(--dur-4) var(--ease-glide)}
+.vrow p{margin-left:auto;max-width:28ch;font-size:var(--text-sm);color:var(--text-faint);opacity:0;transition:opacity var(--dur-3)}
+.vrow.on h3{color:var(--brand-soft);transform:translateX(12px)}
+.vrow.on p{opacity:1;color:var(--text-body)}
+.vrow:hover h3{color:var(--text-hi)}
+.vimg{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e-4),var(--e-glow)}
+.vimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 100% 0);transition:clip-path var(--dur-5) var(--ease-glide),opacity var(--dur-3),transform var(--dur-5) var(--ease-glide);transform:scale(1.12)}
+.vimg img.on{opacity:1;clip-path:inset(0);transform:none}
+.vimg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,33,29,.6),transparent 50%);pointer-events:none}
+@media (max-width:900px){.vals-grid{grid-template-columns:1fr}.vimg{aspect-ratio:4/3;order:-1}.vrow p{display:none}}
+
+/* contact */
+.contact{background:var(--ink-900);position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:'';position:absolute;left:-10%;bottom:-30%;width:70vw;height:70vw;z-index:-1;background:radial-gradient(circle,rgba(201,168,76,.18),transparent 62%);animation:drift 16s var(--ease-in-out) infinite alternate}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px);align-items:start}
+.contact h2{font-size:var(--text-3xl);margin-top:var(--sp-5)}
+.contact .lead{margin-top:var(--sp-5);max-width:44ch}
+.banker{margin-top:var(--sp-7);padding:var(--sp-6);border-radius:var(--r-lg);background:var(--glass-lt);backdrop-filter:blur(16px);border:1px solid var(--glass-edge);box-shadow:var(--e-3),var(--e-inset);display:grid;gap:var(--sp-2);transition:transform var(--dur-3) var(--ease-glide),box-shadow var(--dur-3)}
+.banker:hover{transform:translateY(-6px);box-shadow:var(--e-glow),var(--e-4)}
+.bph{width:112px;height:140px;object-fit:cover;object-position:50% 18%;border-radius:var(--r-md);box-shadow:var(--e-3);border:1px solid var(--glass-edge);margin-bottom:var(--sp-3)}
+.banker small{font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--brand)}
+.banker h3{font-size:var(--text-2xl)}
+.banker a{color:var(--text-hi);width:fit-content;border-bottom:1px solid var(--line-strong);transition:color var(--dur-2),border-color var(--dur-2)}
+.banker a:hover{color:var(--brand-soft);border-color:var(--brand)}
+.cpanel{display:grid;gap:var(--sp-5);padding:clamp(24px,3.5vw,48px);border-radius:var(--r-lg);background:var(--ink-800);border:1px solid var(--line);box-shadow:var(--e-4);align-content:start}
+.cpanel small{font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--brand)}
+.cpanel h3{font-size:var(--text-2xl)}
+.cpanel .btn{justify-content:center;font-size:var(--text-base);padding:20px 28px}
+.cl{display:grid;gap:4px;padding-top:var(--sp-4);border-top:1px solid var(--line)}
+.cl span{font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-mute)}
+.cl a{font-family:var(--font-display);font-size:var(--text-xl);color:var(--text-hi);overflow-wrap:anywhere;transition:color var(--dur-2)}
+.cl a:hover{color:var(--brand-soft)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--ink-800);border-top:1px solid var(--line);overflow:hidden;position:relative}
+.foot-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--sp-7);padding-block:var(--sp-9) var(--sp-7)}
+.foot-top img{height:54px;width:auto}
+.foot-top h4{font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--brand);margin:0 0 var(--sp-4);font-weight:500}
+.foot-top a,.foot-top li{display:block;color:var(--text-body);font-size:var(--text-sm);padding:4px 0;transition:color var(--dur-2)}
+.foot-top a:hover{color:var(--brand-soft)}
+.foot-top ul{list-style:none;margin:0;padding:0}
+.pw{display:inline-flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-5);font-size:var(--text-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-mute);padding:8px 16px;border:1px solid var(--line);border-radius:var(--r-pill)}
+.pw b{color:var(--text-hi);font-weight:500}
+.foot-disc{border-top:1px solid var(--line);padding-block:var(--sp-6)}
+.foot-disc p{font-size:var(--text-sm);color:var(--text-body);max-width:150ch;line-height:1.65;font-weight:400}
+.foot-disc a{color:var(--brand-soft);text-decoration:underline;text-underline-offset:3px}
+.mega{font-family:var(--font-body);font-weight:500;font-size:var(--text-mega);line-height:.8;letter-spacing:-.04em;text-align:center;color:transparent;background:linear-gradient(180deg,var(--brand-soft),var(--brand-deep) 70%,transparent);-webkit-background-clip:text;background-clip:text;padding-top:var(--sp-5);margin-bottom:-.06em;user-select:none;animation:shine 8s var(--ease-in-out) infinite alternate;background-size:100% 160%}
+@keyframes shine{from{background-position:0 0}to{background-position:0 100%}}
+.copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-3);padding-block:var(--sp-5);font-size:var(--text-xs);color:var(--text-faint);border-top:1px solid var(--line)}
+@media (max-width:800px){.foot-top{grid-template-columns:1fr}}
+
+/* minimal reduced-motion: only slows decorative grain-like drift */
+@media (prefers-reduced-motion:reduce){.hero-bg img{animation-duration:80s}}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-in">
+    <img src="aureon-wealth-logo.png" alt="" width="3726" height="1149">
+    <div class="loader-n" id="loaderN">0</div>
+    <div class="loader-bar"><i id="loaderBar"></i></div>
+  </div>
+</div>
+<div class="cursor" id="cursor"></div>
+
+<header class="hdr">
+  <a class="logo" href="#inicio" aria-label="Aureon Wealth, início"><img src="aureon-wealth-logo.png" alt="Aureon Wealth" width="3726" height="1149"></a>
+  <nav class="nav" aria-label="Principal">
+    <a href="#quem-somos">Quem somos</a>
+    <a href="#estrategias">Estratégias</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#modelo">Nosso modelo</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn-gold" href="#contato">Converse com nossa equipe</a>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"><img src="foto-campo.jpg" alt="Campo dourado ao entardecer, símbolo de patrimônio construído com tempo" width="1000" height="563" fetchpriority="high"></div>
+  <div class="wrap hero-main">
+    <div>
+      <div class="eyebrow">Escritório Wealth Powered by AWT</div>
+      <h1><span class="ln"><span style="--i:0">Seu patrimônio</span></span><span class="ln"><span style="--i:1">merece uma</span></span><span class="ln"><span style="--i:2"><em>visão completa.</em></span></span></h1>
+      <p class="lead">Planejamento financeiro e patrimonial, atendimento personalizado e acesso a um ecossistema de soluções especializadas para você, sua família e seus negócios.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#modelo">Conheça nosso modelo de atendimento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-ghost" href="#contato">Agende uma conversa</a>
+      </div>
+    </div>
+    <div class="stage3d" id="stage3d" aria-label="Modelo 3D do símbolo da Aureon, arraste para girar">
+      <canvas id="c3d"></canvas>
+      <div class="hint">Arraste para girar</div>
+    </div>
+  </div>
+  <div class="hero-disc" id="disclaimer-hero">
+    <div class="wrap">
+      <p>A Aureon Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM. Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br/avisos-legais" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq" id="marq" aria-label="Valores: Integridade, Excelência, Prosperidade, Confiança, Legado">
+  <div class="marq-track" id="marqTrack"></div>
+</div>
+
+<!-- QUEM SOMOS -->
+<section class="sec on-light" id="quem-somos">
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow" data-reveal>01 · Quem somos</div>
+      <h2 data-reveal>Enxergamos histórias, objetivos e <em>patrimônios</em> que merecem ser construídos com inteligência.</h2>
+      <p data-reveal>Nosso diferencial está na união entre conhecimento financeiro, visão empreendedora e atendimento verdadeiramente personalizado. Cada pessoa possui uma trajetória única e, por isso, não existem estratégias financeiras universais.</p>
+      <p data-reveal>Nosso compromisso é compreender a realidade, as necessidades e as ambições de cada cliente, em uma experiência pautada em proximidade, transparência e planejamento de longo prazo.</p>
+      <div class="quote" data-reveal>Queremos ajudar pessoas a desenvolver uma mentalidade patrimonial.</div>
+    </div>
+    <div class="wall" data-reveal>
+      <figure class="polaroid pl-1" style="margin:0"><img src="foto-familia.jpg" alt="Pai com dois filhos sorrindo, representando o legado familiar" width="1000" height="667" loading="lazy"></figure>
+      <figure class="polaroid pl-2" style="margin:0"><img src="foto-casa-moderna.jpg" alt="Casa moderna iluminada ao entardecer" width="1000" height="667" loading="lazy"></figure>
+      <figure class="polaroid pl-3" style="margin:0"><img src="foto-arquitetura.jpg" alt="Arquitetura contemporânea em vidro e aço" width="1000" height="667" loading="lazy"></figure>
+      <div class="badge3"><b>Patrimônio &amp; Legado</b><span>Planejamento de longo prazo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRATEGIAS -->
+<section class="sec strat" id="estrategias">
+  <div class="wrap">
+    <div class="strat-head">
+      <div>
+        <div class="eyebrow" data-reveal>02 · Especialidades</div>
+        <h2 data-reveal>Uma única estratégia de <em>planejamento.</em></h2>
+      </div>
+      <div data-reveal>
+        <div class="block-title">Planejamento para investimentos</div>
+        <p>Estratégias para acumular, proteger e multiplicar seu patrimônio. Arraste o divisor para alternar entre Renda Fixa e Renda Variável.</p>
+      </div>
+    </div>
+    <div class="cmp" id="cmp" data-reveal aria-label="Comparador arrastável entre Renda Fixa e Renda Variável">
+      <div class="cmp-layer cmp-a">
+        <img src="foto-colinas.jpg" alt="Colinas verdes suaves, imagem de estabilidade" width="1000" height="595" loading="lazy">
+        <div class="cmp-copy"><span class="cmp-tag">Renda Fixa</span><h3>Previsibilidade para cada objetivo.</h3><p>Ajudamos você a compreender prazos, liquidez e riscos para organizar reservas e projetos de médio prazo.</p></div>
+      </div>
+      <div class="cmp-layer cmp-b">
+        <img src="foto-montanhas.jpg" alt="Montanhas ao amanhecer acima das nuvens" width="1800" height="1200" loading="lazy">
+        <div class="cmp-copy"><span class="cmp-tag">Renda Variável</span><h3>Horizonte longo e diversificação.</h3><p>Ajudamos você a entender oscilações, riscos e horizonte de tempo, sem promessa de resultado.</p></div>
+      </div>
+      <div class="cmp-handle"><span>‹ ›</span></div>
+    </div>
+    <p class="cmp-note">Quando suas necessidades envolverem a administração profissional de carteiras, você poderá contar com os serviços especializados da AWT Consultoria e Administração de Valores Mobiliários Ltda., empresa do AWT Group registrada perante a CVM, mediante contratação específica.</p>
+  </div>
+</section>
+
+<!-- SOLUCOES -->
+<section class="sec sol" id="solucoes">
+  <div class="wrap">
+    <div class="sol-head">
+      <div>
+        <div class="eyebrow" data-reveal>03 · Soluções do ecossistema</div>
+        <h2 data-reveal>Um ponto de contato para <em>diferentes necessidades.</em></h2>
+      </div>
+      <p data-reveal>Facilitamos o acesso a soluções especializadas do AWT Group. Disponibilidade sujeita às condições comerciais, contratuais e regulatórias aplicáveis. Arraste para explorar.</p>
+    </div>
+    <div class="belt" id="belt"></div>
+    <div class="belt-ui">
+      <button class="arrow" id="prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8H2M7 3L2 8l5 5"/></svg></button>
+      <div class="dots" id="dots"></div>
+      <button class="arrow" id="next" aria-label="Próximo"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- MODELO -->
+<section class="sec model" id="modelo">
+  <div class="wrap">
+    <div class="model-top">
+      <div>
+        <div class="eyebrow" data-reveal>04 · Nosso modelo de atendimento</div>
+        <h2 data-reveal>Da conversa ao acompanhamento.</h2>
+      </div>
+      <p data-reveal>Organização e proximidade em cada etapa. As atividades reguladas são executadas pelas empresas e profissionais habilitados do AWT Group.</p>
+    </div>
+    <div class="steps" id="steps">
+      <div class="step" data-reveal><b>01</b><h3>Compreender</h3><p>Entendemos suas necessidades financeiras e patrimoniais e a realidade da sua família ou empresa.</p></div>
+      <div class="step" data-reveal><b>02</b><h3>Organizar</h3><p>Colocamos prioridades e objetivos em ordem, com uma visão integrada do seu patrimônio.</p></div>
+      <div class="step" data-reveal><b>03</b><h3>Planejar</h3><p>Desenhamos o planejamento financeiro e patrimonial com visão de longo prazo.</p></div>
+      <div class="step" data-reveal><b>04</b><h3>Identificar</h3><p>Reconhecemos demandas especializadas que exigem profissionais e instituições habilitadas.</p></div>
+      <div class="step" data-reveal><b>05</b><h3>Conectar</h3><p>Facilitamos o acesso às soluções do ecossistema AWT, com as responsabilidades bem definidas.</p></div>
+      <div class="step" data-reveal><b>06</b><h3>Acompanhar</h3><p>Seguimos junto, observando a evolução dos seus objetivos patrimoniais ao longo do tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICO -->
+<section class="sec on-light aud" id="publico">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>05 · Para quem</div>
+    <h2 data-reveal>Cada trajetória pede um <em>planejamento próprio.</em></h2>
+    <div class="acc" id="acc" data-a="0">
+      <div class="pane on" data-i="0"><span class="num">01</span><img src="foto-arquitetura.jpg" alt="Edifício moderno, símbolo de carreira em ascensão" width="1000" height="667" loading="lazy"><div class="pane-in"><h3>Profissionais em ascensão</h3><p>Renda crescente pede organização e planejamento desde o começo.</p></div></div>
+      <div class="pane" data-i="1"><span class="num">02</span><img src="foto-predios.jpg" alt="Edifícios corporativos vistos de baixo" width="1000" height="667" loading="lazy"><div class="pane-in"><h3>Empresários e empreendedores</h3><p>Separar patrimônio pessoal e empresarial e planejar o futuro do negócio.</p></div></div>
+      <div class="pane" data-i="2"><span class="num">03</span><img src="foto-documentos.jpg" alt="Mãos analisando documentos e planejamento em mesa de trabalho" width="1000" height="667" loading="lazy"><div class="pane-in"><h3>Patrimônio em desenvolvimento</h3><p>Mais conhecimento, diversificação e estratégias alinhadas aos seus objetivos.</p></div></div>
+      <div class="pane" data-i="3"><span class="num">04</span><img src="foto-familia-praia.jpg" alt="Família caminhando de mãos dadas à beira-mar" width="1000" height="667" loading="lazy"><div class="pane-in"><h3>Famílias e legado</h3><p>Preservação do patrimônio, planejamento sucessório e um legado familiar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="sec vals" id="valores">
+  <div class="wrap vals-grid">
+    <div>
+      <div class="eyebrow" data-reveal>06 · Valores</div>
+      <h2 data-reveal>O que <em>sustenta</em> cada relacionamento.</h2>
+      <div id="vlist"></div>
+    </div>
+    <div class="vimg" id="vimg" data-reveal>
+      <img class="on" src="foto-ondas.jpg" alt="Ondas calmas do oceano, imagem de integridade" width="1000" height="667" loading="lazy">
+      <img src="foto-picos.jpg" alt="Picos verdes sob luz dourada, imagem de excelência" width="1400" height="930" loading="lazy">
+      <img src="foto-colinas.jpg" alt="Colinas verdes, imagem de prosperidade" width="1000" height="595" loading="lazy">
+      <img src="foto-floresta-luz.jpg" alt="Trilha na floresta com luz dourada, imagem de confiança" width="1600" height="1066" loading="lazy">
+      <img src="foto-arvore.jpg" alt="Árvore centenária em campo aberto, imagem de legado" width="1000" height="667" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="sec contact" id="contato">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow" data-reveal>07 · Contato</div>
+      <h2 data-reveal>Vamos conversar sobre o que <em>realmente importa</em> para você.</h2>
+      <p class="lead" data-reveal>Agende uma conversa sobre seus objetivos financeiros e conheça uma forma mais integrada de organizar seu patrimônio.</p>
+      <div class="banker" data-reveal>
+        <img class="bph" src="Aureom-FotoCorp.png" alt="Anderson Silva, Banker da Aureon Wealth" width="1122" height="1402" loading="lazy">
+        <small>Banker</small>
+        <h3>Anderson Silva</h3>
+        <a href="tel:+5511915157070">+55 (11) 91515-7070</a>
+        <a href="mailto:andersonspinheiro53@gmail.com">andersonspinheiro53@gmail.com</a>
+      </div>
+    </div>
+    <div class="cpanel" data-reveal>
+      <small>Fale com o nosso Banker</small>
+      <h3>Escolha o canal de sua preferência.</h3>
+      <a class="btn btn-gold" href="https://wa.me/5511915157070?text=Ol%C3%A1%2C%20Anderson!%20Gostaria%20de%20agendar%20uma%20conversa%20sobre%20meu%20planejamento%20patrimonial." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.800 14.100c-.2.700-1.400 1.300-1.900 1.300-.5.100-1.100.1-1.800-.1-.4-.1-.9-.3-1.600-.6-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800 0-1.300.7-1.900.9-2.200.2-.2.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.3.500-.4.400c-.1.100-.3.300-.1.600.2.300.7 1.100 1.500 1.800 1 .9 1.800 1.200 2.100 1.300.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.800.9c.3.100.5.200.5.300.1.200.1.800-.1 1.500Z"/></svg> Conversar no WhatsApp</a>
+      <div class="cl"><span>E-mail</span><a href="mailto:andersonspinheiro53@gmail.com">andersonspinheiro53@gmail.com</a></div>
+      <div class="cl"><span>Telefone</span><a href="tel:+5511915157070">+55 (11) 91515-7070</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="aureon-wealth-logo.png" alt="Aureon Wealth" width="3726" height="1149">
+        <p style="margin-top:var(--sp-5);max-width:36ch;color:var(--text-mute)">Patrimônio &amp; Legado. Planejamento financeiro e patrimonial com visão de longo prazo.</p>
+        <div class="pw">Escritório Wealth <b>Powered by AWT</b></div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul><li><a href="#quem-somos">Quem somos</a></li><li><a href="#estrategias">Estratégias</a></li><li><a href="#solucoes">Soluções do ecossistema</a></li><li><a href="#modelo">Nosso modelo</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+5511915157070">+55 (11) 91515-7070</a></li><li><a href="mailto:andersonspinheiro53@gmail.com">andersonspinheiro53@gmail.com</a></li><li><a href="#">Política de Privacidade</a></li><li><a href="https://www.awtgroup.com.br/avisos-legais" target="_blank" rel="noopener">Avisos Legais e Regulatórios do AWT Group</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-disc">
+      <p>A Aureon Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM. Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br/avisos-legais" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+    </div>
+  </div>
+  <div class="mega" aria-hidden="true">AUREON</div>
+  <div class="wrap"><div class="copy"><span>© 2026 Aureon Wealth. Todos os direitos reservados.</span><span>Patrimônio &amp; Legado</span></div></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- loader (time based) ---------- */
+var ld=$('#loader'),ln=$('#loaderN'),lb=$('#loaderBar'),t0=performance.now(),DUR=1700;
+(function tick(){var p=Math.min(1,(performance.now()-t0)/DUR);var e=1-Math.pow(1-p,3);
+  ln.textContent=Math.round(e*100);lb.style.transform='scaleX('+e+')';
+  if(p<1)requestAnimationFrame(tick);else setTimeout(function(){ld.classList.add('done');setTimeout(startReveals,500)},250)})();
+
+/* ---------- reveals (one-shot, not scroll-driven) ---------- */
+function startReveals(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  $$('[data-reveal]').forEach(function(el,i){el.style.setProperty('--d',(i%4)*80+'ms');io.observe(el)});
+}
+setTimeout(function(){$$('[data-reveal]').forEach(function(el){/* safety net */ if(!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight)el.classList.add('in')})},4200);
+
+/* ---------- cursor ---------- */
+var cur=$('#cursor');
+if(matchMedia('(pointer:fine)').matches){
+  var cx=0,cy=0,tx=0,ty=0;
+  addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;cur.classList.add('on')},{passive:true});
+  (function f(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.transform='translate3d('+cx+'px,'+cy+'px,0)';requestAnimationFrame(f)})();
+  document.addEventListener('pointerover',function(e){cur.classList.toggle('big',!!e.target.closest('a,button,.card,.pane,.vrow,.step,.cmp,.stage3d,.marq'))});
+}
+
+/* ---------- marquee: auto loop + drag ---------- */
+(function(){
+  var words=['Integridade','Excelência','Prosperidade','Confiança','Legado'],tr=$('#marqTrack'),h='';
+  for(var k=0;k<4;k++)words.forEach(function(w){h+='<div class="marq-item">'+w+'<i></i></div>'});
+  tr.innerHTML=h;var half=0,x=0,v=-0.7,drag=false,lx=0,box=$('#marq');
+  function measure(){half=tr.scrollWidth/2}measure();addEventListener('resize',measure);
+  box.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;box.setPointerCapture(e.pointerId)});
+  box.addEventListener('pointermove',function(e){if(!drag)return;var d=e.clientX-lx;lx=e.clientX;x+=d;v=d*.9});
+  var up=function(){drag=false};box.addEventListener('pointerup',up);box.addEventListener('pointercancel',up);
+  (function f(){if(!drag){v+=((v<0?-.7:.7)-v)*.04;x+=v}
+    if(x<=-half)x+=half;if(x>0)x-=half;tr.style.transform='translate3d('+x+'px,0,0)';requestAnimationFrame(f)})();
+})();
+
+/* ---------- compare slider: drag + infinite oscillation ---------- */
+(function(){
+  var el=$('#cmp'),pct=50,drag=false,idle=performance.now(),phase=0,last=performance.now();
+  function set(p){pct=Math.max(4,Math.min(96,p));el.style.setProperty('--x',pct+'%')}
+  function fromEvt(e){var r=el.getBoundingClientRect();set((e.clientX-r.left)/r.width*100)}
+  el.addEventListener('pointerdown',function(e){drag=true;el.setPointerCapture(e.pointerId);fromEvt(e)});
+  el.addEventListener('pointermove',function(e){if(drag)fromEvt(e)});
+  var up=function(){if(drag){drag=false;idle=performance.now();phase=Math.asin(Math.max(-1,Math.min(1,(pct-50)/38)))}};
+  el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);
+  (function f(now){var dt=(now-last)/1000;last=now;
+    if(!drag){phase+=dt*.55;var target=50+38*Math.sin(phase);set(pct+(target-pct)*Math.min(1,dt*3))}
+    requestAnimationFrame(f)})(last);
+})();
+
+/* ---------- coverflow belt: circular, drag + momentum + auto-advance ---------- */
+(function(){
+  var data=[
+   ['Planejamento financeiro e patrimonial','Grandes projetos começam com boas decisões. Uma visão integrada das suas metas, liquidez e estrutura familiar.','foto-documentos.jpg','Mãos revisando planejamento financeiro sobre a mesa'],
+   ['Seguros e proteção familiar','Ajudamos a identificar necessidades de proteção e a acessar soluções de empresas e profissionais habilitados.','foto-familia.jpg','Pai com os filhos, imagem de proteção familiar'],
+   ['Previdência e longevidade','Seu futuro merece planejamento desde hoje. Compreenda objetivos, horizonte de tempo e necessidades de renda.','foto-por-do-sol.jpg','Família reunida na praia ao pôr do sol'],
+   ['Câmbio e soluções internacionais','Seu patrimônio não precisa conhecer fronteiras. Operações realizadas por instituições autorizadas.','foto-predios.jpg','Arranha-céus vistos de baixo'],
+   ['Crédito e liquidez','Planejamento de liquidez para seus projetos, com análise e concessão a cargo das instituições responsáveis.','foto-casa-piscina.jpg','Casa moderna com piscina'],
+   ['Planejamento sucessório','Seu patrimônio. Sua história. Seu legado. Acesso a especialistas habilitados para continuidade entre gerações.','foto-arvore.jpg','Árvore grande e frondosa em campo aberto']
+  ];
+  var belt=$('#belt'),dots=$('#dots'),N=data.length,cards=[],di=[];
+  data.forEach(function(d,i){
+    var c=document.createElement('article');c.className='card';
+    c.innerHTML='<img src="'+d[2]+'" alt="'+d[3]+'" width="1000" height="667" loading="lazy" draggable="false"><div class="card-in"><div class="n">0'+(i+1)+'</div><h3>'+d[0]+'</h3><p>'+d[1]+'</p><small>Serviços prestados por empresas e profissionais habilitados do ecossistema AWT Group.</small></div>';
+    belt.appendChild(c);cards.push(c);var dd=document.createElement('i');dots.appendChild(dd);di.push(dd)});
+  var pos=0,target=null,vel=0,drag=false,lx=0,moved=0,stride=380,cw=300,bw=800,lastInt=performance.now(),last=performance.now();
+  function measure(){cw=cards[0].offsetWidth;bw=belt.offsetWidth;stride=cw*1.06}
+  measure();addEventListener('resize',measure);
+  belt.addEventListener('pointerdown',function(e){drag=true;moved=0;lx=e.clientX;vel=0;target=null;belt.setPointerCapture(e.pointerId)});
+  belt.addEventListener('pointermove',function(e){if(!drag)return;var d=e.clientX-lx;lx=e.clientX;moved+=Math.abs(d);pos-=d;vel=-d;lastInt=performance.now()});
+  var up=function(){if(!drag)return;drag=false;lastInt=performance.now()};
+  belt.addEventListener('pointerup',up);belt.addEventListener('pointercancel',up);
+  function go(dir){target=(Math.round(pos/stride)+dir)*stride;lastInt=performance.now()}
+  $('#prev').addEventListener('click',function(){go(-1)});$('#next').addEventListener('click',function(){go(1)});
+  (function f(now){var dt=Math.min(.05,(now-last)/1000);last=now;
+    if(!drag){
+      if(target===null){pos+=vel;vel*=.94;if(Math.abs(vel)<.4&&Math.abs(vel)>0){vel=0;target=Math.round(pos/stride)*stride}
+        else if(vel===0&&now-lastInt>3200){go(1)}}
+      if(target!==null){pos+=(target-pos)*Math.min(1,dt*5);if(Math.abs(target-pos)<.4){pos=target;target=null;vel=0;}}
+    }
+    var u=pos/stride,cxm=bw/2-cw/2,act=((Math.round(u)%N)+N)%N;
+    for(var i=0;i<N;i++){
+      var d=(((i-u+N/2)%N)+N)%N-N/2,ad=Math.abs(d),cl=Math.max(-1.6,Math.min(1.6,d));
+      var x=cxm+d*stride*(ad>1?0.86:1);
+      cards[i].style.transform='translate3d('+x+'px,'+(ad*10)+'px,'+(-ad*140)+'px) rotateY('+(-cl*34)+'deg) scale('+(1-Math.min(ad,2)*.06)+')';
+      cards[i].style.zIndex=100-Math.round(ad*10);
+      cards[i].style.filter='brightness('+(1-Math.min(ad,2)*.3)+')';
+      cards[i].style.opacity=ad>2.7?0:1;
+    }
+    di.forEach(function(x,i){x.classList.toggle('on',i===act)});
+    requestAnimationFrame(f)})(last);
+})();
+
+/* ---------- steps: cycling highlight (color swap) ---------- */
+(function(){var s=$$('.step'),i=0;setInterval(function(){s.forEach(function(x){x.classList.remove('hot')});if(!matchMedia('(hover:hover)').matches||!s.some(function(x){return x.matches(':hover')}))s[i%s.length].classList.add('hot');i++},2200)})();
+
+/* ---------- audience accordion: hover/tap + auto loop ---------- */
+(function(){
+  var acc=$('#acc'),ps=$$('.pane',acc),cur=0,hold=0;
+  function set(i){cur=i;acc.dataset.a=i;ps.forEach(function(p,k){p.classList.toggle('on',k===i)})}
+  ps.forEach(function(p,i){p.addEventListener('mouseenter',function(){hold=Date.now();set(i)});p.addEventListener('click',function(){hold=Date.now();set(i)})});
+  setInterval(function(){if(Date.now()-hold>5000)set((cur+1)%ps.length)},3600);
+})();
+
+/* ---------- values: list + image swap, auto loop ---------- */
+(function(){
+  var V=[['Integridade','Ética, transparência e responsabilidade em cada relacionamento.'],['Excelência','Os mais altos padrões de qualidade, conhecimento e profissionalismo.'],['Prosperidade','Crescimento financeiro consciente e sustentável.'],['Confiança','Relacionamentos duradouros, pautados no respeito e na credibilidade.'],['Legado','Pensar além do presente, pela segurança das próximas gerações.']];
+  var list=$('#vlist'),imgs=$$('#vimg img'),rows=[],cur=0,hold=0;
+  V.forEach(function(v,i){var r=document.createElement('div');r.className='vrow';r.innerHTML='<span>0'+(i+1)+'</span><h3>'+v[0]+'</h3><p>'+v[1]+'</p>';list.appendChild(r);rows.push(r);
+    r.addEventListener('mouseenter',function(){hold=Date.now();set(i)});r.addEventListener('click',function(){hold=Date.now();set(i)})});
+  function set(i){cur=i;rows.forEach(function(r,k){r.classList.toggle('on',k===i)});imgs.forEach(function(m,k){m.classList.toggle('on',k===i)})}
+  set(0);setInterval(function(){if(Date.now()-hold>5000)set((cur+1)%V.length)},3000);
+})();
+
+/* ---------- 3D logo (three.js) ---------- */
+(function(){
+  if(!window.THREE)return;var T=THREE,stage=$('#stage3d'),canvas=$('#c3d');
+  var r;try{r=new T.WebGLRenderer({canvas:canvas,antialias:true,alpha:true})}catch(err){stage.querySelector('.hint').textContent='';stage.style.background='center/contain no-repeat url(aureon-wealth-logo.png)';return}r.setPixelRatio(Math.min(devicePixelRatio,2));
+  r.outputEncoding=T.sRGBEncoding;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.15;
+  var sc=new T.Scene(),cam=new T.PerspectiveCamera(34,1,.1,100);cam.position.set(0,0,9);
+  /* environment: gradient studio canvas */
+  var ec=document.createElement('canvas');ec.width=1024;ec.height=512;var g=ec.getContext('2d');
+  var gr=g.createLinearGradient(0,0,0,512);gr.addColorStop(0,'#fff3cf');gr.addColorStop(.35,'#3a2c10');gr.addColorStop(.6,'#0c0a07');gr.addColorStop(1,'#c9a84c');g.fillStyle=gr;g.fillRect(0,0,1024,512);
+  g.fillStyle='rgba(255,255,255,.95)';g.fillRect(120,110,90,200);g.fillRect(560,70,160,26);g.fillRect(820,150,60,240);
+  g.fillStyle='rgba(255,214,120,.9)';g.fillRect(330,180,120,18);
+  var et=new T.CanvasTexture(ec);et.mapping=T.EquirectangularReflectionMapping;et.encoding=T.sRGBEncoding;
+  var pm=new T.PMREMGenerator(r);var env=pm.fromEquirectangular(et).texture;sc.environment=env;
+  var gold=new T.MeshStandardMaterial({color:0xc9a84c,metalness:1,roughness:.26,envMap:env,envMapIntensity:1.5});
+  function shape(pts){var s=new T.Shape();pts.forEach(function(p,i){var x=(p[0]-50)/18,y=(50-p[1])/18;i?s.lineTo(x,y):s.moveTo(x,y)});s.closePath();return s}
+  var ex={depth:.9,bevelEnabled:true,bevelThickness:.12,bevelSize:.1,bevelSegments:4,curveSegments:2};
+  var m1=new T.Mesh(new T.ExtrudeGeometry(shape([[50,2],[98,98],[73,98],[50,51],[27,98],[2,98]]),ex),gold);
+  var m2=new T.Mesh(new T.ExtrudeGeometry(shape([[50,67],[62,98],[38,98]]),Object.assign({},ex,{depth:1.5})),gold);
+  var grp=new T.Group();grp.add(m1,m2);
+  new T.Box3().setFromObject(grp).getCenter(grp.position).multiplyScalar(-1);
+  var root=new T.Group();root.add(grp);sc.add(root);
+  /* orbit ring + particles */
+  var ring=new T.Mesh(new T.TorusGeometry(3.1,.018,12,160),new T.MeshStandardMaterial({color:0xe0c57a,metalness:1,roughness:.2,envMap:env}));ring.rotation.x=Math.PI/2.4;sc.add(ring);
+  var ring2=new T.Mesh(new T.TorusGeometry(3.6,.01,12,160),new T.MeshBasicMaterial({color:0xc9a84c,transparent:true,opacity:.45}));ring2.rotation.set(Math.PI/2.9,.5,0);sc.add(ring2);
+  var np=220,pa=new Float32Array(np*3),pd=[];for(var i=0;i<np;i++){var a=Math.random()*6.283,rr=2.4+Math.random()*2.2,y=(Math.random()-.5)*4;pd.push([a,rr,y,.002+Math.random()*.004]);}
+  var pg=new T.BufferGeometry();pg.setAttribute('position',new T.BufferAttribute(pa,3));
+  var pts=new T.Points(pg,new T.PointsMaterial({color:0xe0c57a,size:.045,transparent:true,opacity:.85,depthWrite:false}));sc.add(pts);
+  var key=new T.DirectionalLight(0xfff0c8,2.2);key.position.set(4,5,6);sc.add(key);
+  var rim=new T.PointLight(0x1c6b5c,40,20);rim.position.set(-5,-2,-3);sc.add(rim);
+  var warm=new T.PointLight(0xb8683a,28,20);warm.position.set(5,-3,2);sc.add(warm);
+  function size(){var w=stage.clientWidth,h=stage.clientHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.position.z=w/h<.9?14:11.5;cam.updateProjectionMatrix()}
+  size();addEventListener('resize',size);
+  var drag=false,lx=0,ly=0,vy=0,vx=0,ry=.4,rx=.1;
+  stage.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;ly=e.clientY;stage.setPointerCapture(e.pointerId)});
+  stage.addEventListener('pointermove',function(e){if(!drag)return;vy=(e.clientX-lx)*.012;vx=(e.clientY-ly)*.008;ry+=vy;rx+=vx;lx=e.clientX;ly=e.clientY});
+  var up=function(){drag=false};stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
+  var vis=true;new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(stage);
+  var t=0;(function f(){requestAnimationFrame(f);if(!vis)return;t+=.01;
+    if(!drag){ry+=vy;vy+=(.006-vy)*.03;rx+=(.1+Math.sin(t*.7)*.12-rx)*.04}
+    root.rotation.y=ry;root.rotation.x=rx;root.position.y=Math.sin(t)*.12;
+    ring.rotation.z+=.003;ring2.rotation.z-=.002;
+    for(var i=0;i<np;i++){var p=pd[i];p[0]+=p[3];pa[i*3]=Math.cos(p[0])*p[1];pa[i*3+1]=p[2]+Math.sin(t+i)*.05;pa[i*3+2]=Math.sin(p[0])*p[1]}
+    pg.attributes.position.needsUpdate=true;
+    r.render(sc,cam)})();
+})();
+})();
+</script>
+</body>
+</html>
